@@ -3,7 +3,7 @@
 This is an implementation of the paper [Using Explainability for Constrained Matrix Factorization](https://dl.acm.org/doi/10.1145/3109859.3109913). 
 We implement both EMF amd MF with explainability metrics. 
 
-Many of the components of this implementation  are modified from the following repo [implementation](https://github.com/yihong-chen/neural-collaborative-filtering)
+Many of the components of this implementation  are modified from the following  [repo](https://github.com/yihong-chen/neural-collaborative-filtering)
 
 
 ## Requirements and installation
