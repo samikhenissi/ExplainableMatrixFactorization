@@ -7,7 +7,7 @@ import numpy as np
 
 
 """
- from : https://github.com/yihong-chen/neural-collaborative-filtering
+ modified from : https://github.com/yihong-chen/neural-collaborative-filtering
 """
 
 
@@ -37,7 +37,7 @@ class MetronAtK(object):
     def subjects(self, subjects):
         """
         args:
-            subjects: list, [test_users, test_items, test_true,test_pred]
+            subjects: list, [test_users, test_items, test_true,test_pred,exp_score]
         """
         assert isinstance(subjects, list)
         test_users, test_items,test_pred, test_true,exp_score = subjects[0], subjects[1], subjects[2], subjects[3],subjects[4]

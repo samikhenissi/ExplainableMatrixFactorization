@@ -12,10 +12,10 @@ random.seed(42)
 
 class UserItemRatingDataset(Dataset):
     """
-    from: https://github.com/yihong-chen/neural-collaborative-filtering
+    modified from: https://github.com/yihong-chen/neural-collaborative-filtering
     """
 
-    """Wrapper, convert <user, item, rating> Tensor into Pytorch Dataset"""
+    """Wrapper, convert <user, item, rating, exp_score> Tensor into Pytorch Dataset"""
 
     def __init__(self, user_tensor, item_tensor, target_tensor,exp_score=None):
         """
@@ -45,7 +45,6 @@ class SampleGenerator(object):
         """
         Modified  from: https://github.com/yihong-chen/neural-collaborative-filtering
         Added batching for validation
-        Optimized the negative sampling for both pointwise and pairwise loss
 
         TODO: Add a random splitting
         """
