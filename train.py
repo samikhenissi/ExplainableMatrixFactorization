@@ -77,8 +77,8 @@ def main(args):
         mode='min'
     )
 
-    #for p in model.parameters():
-    #    p.data.normal_(mean=0, std=0.01)
+    for p in model.parameters():
+        p.data.normal_(mean=0, std=0.01)
 
     trainer = pl.Trainer(gpus=1, max_epochs=config["num_epoch"],checkpoint_callback=False,
                          logger = False,early_stop_callback=early_stop_callback)
@@ -97,6 +97,8 @@ if __name__ == "__main__":
     # model
     parser.add_argument('--model',
                         type=str,
-                        default="EMF",
+                        default="MF",
                         help="Model to train: MF or EMF")
 
+    args = parser.parse_args()
+    main(args)
