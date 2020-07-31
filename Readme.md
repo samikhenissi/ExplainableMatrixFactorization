@@ -7,6 +7,12 @@ Many of the components of this implementation  are modified from the following  
 
 
 ## Requirements and installation
+Clone this repo using
+```bash
+git clone https://github.com/samikhenissi/ExplainableMatrixFactorization.git
+```
+
+
 We used pytorch 1.5.1 and pytorch-lightning==0.8.5
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install requirements or refer to official website for [pytorch](https://pytorch.org/) and [pytorch-lightning](https://github.com/PytorchLightning/pytorch-lightning).
