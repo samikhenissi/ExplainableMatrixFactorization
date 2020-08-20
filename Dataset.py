@@ -87,8 +87,9 @@ class SampleGenerator(object):
         sorted_ind = np.argsort(dist_items, axis=1)
         def calculate_exp_score(i,j):
             sims = sorted_ind[i, 1:(neighbor + 1)]
+
             if j<rating_matrix.shape[1]:
-                temp = [(rating_matrix[y, j]>0)*1 for y in sims]
+                temp = [rating_matrix[y, j] for y in sims]
             else:
                 temp = [0 for y in sims]
             num = sum(temp) / float(neighbor)

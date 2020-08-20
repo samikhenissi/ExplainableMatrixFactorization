@@ -97,7 +97,7 @@ if __name__ == "__main__":
     # model
     parser.add_argument('--model',
                         type=str,
-                        default="MF",
+                        default="EMF",
                         help="Model to train: MF or EMF")
 
     args = parser.parse_args()

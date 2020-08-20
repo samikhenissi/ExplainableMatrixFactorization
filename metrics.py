@@ -90,7 +90,7 @@ class MetronAtK(object):
         return mapk(actual, predicted, k=topk)
 
 
-    def calculate_MEP(self, theta=0.1):
+    def calculate_MEP(self, theta=2):
         full, top_k = self._subjects_explicit, self._top_k
         full['exp_and_rec'] = ((full['exp_score'] > theta) & (full['rank_true'] <= top_k) & (full['rank'] <= top_k)) * 1
         full['exp'] = (full['rank'] <= top_k) * 1
