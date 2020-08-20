@@ -1,15 +1,14 @@
-# (submit.sh)
 #!/bin/bash -l
 
 # SLURM SUBMIT SCRIPT
 #SBATCH --nodes=4
-SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:1
 #SBATCH --ntasks-per-node=8
 #SBATCH --mem=0
 #SBATCH --time=0-02:00:00
 
-# activate conda env
-source activate $1
+# Clear the environment from any previously loaded modules
+module load anaconda
 
 
 # on your cluster you might need these:
